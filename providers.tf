@@ -17,4 +17,12 @@ terraform {
 
 provider "aws" {
   profile = "fet-aws"
+  region  = "us-east-1"
+  default_tags {
+    tags = {
+      Owner       = "foreachtoil"
+      Environment = "sre-course"
+      ManagedBy   = "Terraform"
+    }
+  }
 }
